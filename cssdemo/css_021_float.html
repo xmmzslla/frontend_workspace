@@ -10,6 +10,9 @@
         float
         1. float는 박스의 위치를 부모요소의 안에서 왼쪽 또는 오른쪽으로 이동시키는 기능이다.
         2. float가 지정된 박스는 문서의 일반적인 흐름에 영향을 받지 않으며 이동된 위치에 떠있다.
+
+        부모를 기준으로 왼쪽 오른쪽
+
         */
 
       .wrap {
@@ -28,13 +31,22 @@
       }
 
       .box2 {
-        float: left;
+        float: right;
         background-color: green;
       }
 
       .box3 {
         float: left;
         background-color: blue;
+      }
+
+      div.wrap p {
+        clear: both; /* float 해제 */
+      }
+
+      img {
+        float: left;
+        margin-right: 10px;
       }
     </style>
   </head>
