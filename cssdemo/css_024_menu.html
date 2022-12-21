@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css_024_menu.html</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: with 0;
+        }
+
+        body{
+            margin-left: 10px;
+        }
+
+        .menulist{
+            width: 294px;
+            height: 34px;
+            background-color: yellow;
+            border: 2px solid;
+        }
+
+        dl.menulist dt{
+            width: 0px;
+            height: 0px;
+            font-size: 0px;/*화면에 안보임*/
+            text-indent: -2000px;
+        }
+
+        dl.menulist dd{
+            border: 2px solid;
+            float: left;
+            border-left-width: 0;
+        }
+
+        dl.menulist dd a{
+            display: block; 
+            /*인라인 요소에는 크기설정을 못하지만 병=ㄴ형을 줘서 잡을 수 있음*/
+            width: 96px;
+            height: 30px;
+            text-align: center;
+            text-decoration: none;
+            font: bold 16px/30px nanumgothic, '굴림체', sanf-serif;
+        }
+
+        dl.menulist dd a:hover{
+            text-decoration: underline;
+            font-size: 22px;
+            font-weight: bolder;
+            letter-spacing: -1px;
+            background-color: black;
+            color: white;
+        }
+          
+    </style>
+  </head>
+  <body>
+    <dl class='menulist'>
+        <dt>메뉴목록
+            <dd><a href='#'>교육센터</a></dd>
+            <dd><a href='#'>교육안내</a></dd>
+            <dd><a href='#'>교육일정</a></dd>
+        </dt>
+    </dl>
+  </body>
+</html>
