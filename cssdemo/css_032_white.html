@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>css_032_white_space.html</title>
     <style>
-      /*
-          
-                    스페이와 탭                 줄바꿈                자동 줄바꿈
-         normal        병합                     병합                    O
-         nowrap        병합                     병합                    X
-         pre           보존                     보존                    X
-         pre-wrap      보존                     보존                    O
-         pre-line      병합                     보전                    O
-      */
+      /* 
+                   스페이스와 탭        줄바꿈        자동 줄바꿈
+        normal         병합             병합              O       
+        nowrap         병합             병합              X    
+        pre            보존             보존              X    
+        pre-wrap       보존             보존              O    
+        pre-line       병합             보존              O    
+     */
       .a {
         white-space: nowrap;
       }
