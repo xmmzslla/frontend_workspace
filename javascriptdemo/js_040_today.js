@@ -1,4 +1,4 @@
-// js.040_today.js
+// js_040_today.js
 
 let dataBtnNode = document.querySelector('button');
 

@@ -1,4 +1,4 @@
-// js.039_select.js
+// js_039_select.js
 
 document.frm.onsubmit = () => {
   let optFruit = document.querySelector('#sel');
