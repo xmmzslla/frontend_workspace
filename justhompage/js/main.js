@@ -22,13 +22,13 @@ setInterval(function () {
 /////////////////////////
 function chgTab(i1, i2) {
   // 탭메뉴
-  let tm = document.querySelector('.tm>li');
+  let tm = document.querySelectorAll('.tm>li');
 
   //탭내용
-  let tc = document.querySelector('.tc>li');
+  let tc = document.querySelectorAll('.tc>li');
 
   //   클래스 추가
-  tm[i1].classList.add('on');
+  tm[i1].classList.add('on'); //갤러리에 추가
   tc[i1].classList.add('on');
 
   //   클래스 제거
