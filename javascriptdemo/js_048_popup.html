@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_048_popup.html</title>
+    <script defer src="js_048_popup.js"></script>
+    <style>
+      #pt {
+        position: absolute;
+        left: 50px;
+        top: 100px;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      Here comes a wave meant to wash me away A tide that is taking me under
+      Swallowing sand left with nothing to say My voice drowned out in the
+      thunder But I won't cry And I won't start to crumble Whenever they try To
+      shut me or cut me down I won't be silenced You can't keep me quiet Won't
+      tremble when you try it All I know is I won't go speechless 'Cause I'll
+      breathe When they try to suffocate me Don't you underestimate me 'Cause I
+      know that I won't go speechless Written in stone Every rule every word
+      Centuries old and unbending Stay in your place Better seen and not heard
+      But now that story is ending 'Cause I I cannot start to crumble So come on
+      and try Try to shut me and cut me down I won't be silenced You can't keep
+      me quiet Won't tremble when you try it All I know is I won't go speechless
+      speechless Let the storm in I cannot be broken No I won't live unspoken
+      'Cause I know that I won't go speechless Try to lock me in this cage I
+      won't just lay me down and die I will take these broken wings And watch me
+      burn across the sky Hear the echo saying I won't be silenced Though you
+      wanna see me tremble When you try it All I know is I won't go speechless
+      speechless 'Cause I'll breathe When they try to suffocate me Don't you
+      underestimate me 'Cause I know that I won't go speechless All I know is I
+      won't go speechless speechless
+    </div>
+    <div id="pt">
+      <img src="images/popup.jpg" usemap="#pop" />
+      <!-- usemap="#pop"은 아이디 값을 참조하겠다고 하는 것이기 때문에 이름이 같아야함 -->
+
+      <map name="pop" id="pop">
+        <!--map = img-->
+        <!--coors='x start, y start x end, yend'-->
+        <area
+          shape="rect"
+          coords="255,332,290,345"
+          href="#"
+          alt="창닫기"
+          <!--
+          onclick="window.close()"
+          --
+        />
+      </map>
+    </div>
+  </body>
+</html>

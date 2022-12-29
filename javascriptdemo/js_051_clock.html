@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_051_clock</title>
+    <script defer src="js_051_clock.js"></script>
+    <style>
+      .clock_box {
+        display: inline-block;
+        padding: 8px;
+        border-radius: 8px;
+        background-color: rgb(171, 207, 239);
+        color: white;
+        text-align: center;
+      }
+
+      .large_text {
+        font-size: 75px;
+      }
+
+      .small_text {
+        font-size: 20px;
+      }
+
+      .colon {
+        font-size: 55px;
+        vertical-align: text-bottom;
+      }
+
+      @keyframes blink {
+        50% {
+          /*0.5초에 한번씩 실행*/
+          opacity: 0;
+        }
+      }
+
+      .colon {
+        font-size: 55px;
+        vertical-align: text-bottom;
+        animation: blink 1s step-start 0s infinite;
+        /*0s딜레이될 시간 지정*/
+        /*infinite = 반복하다*/
+      }
+    </style>
+  </head>
+  <body>
+    <h3>디지털 시계</h3>
+    <div class="clock_box">
+      <div class="time_box">
+        <span id="hours" class="large_text"></span>
+        <span class="colon">:</span>
+        <span id="minute" class="large_text"></span>
+        <span id="seconds" class="small_text"></span>
+      </div>
+
+      <div class="date_box">
+        <span id="year"></span>
+        <span>.</span>
+        <span id="month"></span>
+        <span>.</span>
+        <span id="date"></span>
+        <span id="day"></span>
+      </div>
+    </div>
+  </body>
+</html>
