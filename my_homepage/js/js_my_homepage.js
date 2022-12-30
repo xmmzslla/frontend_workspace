@@ -1,25 +1,20 @@
-//  main.js
+//  my_homepage.js
 
-////////////////////////
-// 슬라이드 기능 구현
-////////////////////////
-
+// 슬라이드
 setInterval(function () {
   let tg = document.querySelector('.slide');
   tg.style.top = '-100%';
-  tg.style.transition = '0.6s';
+  tg.style.transition = '0.8s';
 
   setTimeout(function () {
     let first = tg.querySelectorAll('li')[0];
-    tg.appendChild(first); //이미지가 반복해서 돌아가도록 올라간 이미지를 밑으로 내려준다
+    tg.appendChild(first);
     tg.style.top = '0';
-    tg.style.transition = 'none'; //0.6을 없앰
-  }, 600); //0.6초 후에 위의4가지 작업들이 이루어진다
-}, 3000); //3초 동안 실행
+    tg.style.transition = 'none';
+  }, 800);
+}, 4000);
 
-/////////////////////////
-// 탭변경 변경하기
-/////////////////////////
+// 탭변경
 function chgTab(i1, i2) {
   // 탭메뉴
   let tm = document.querySelectorAll('.tm>li');
@@ -35,11 +30,6 @@ function chgTab(i1, i2) {
   tm[i2].classList.remove('on');
   tc[i2].classList.remove('on');
 }
-
-/*////////////////////////////////
-함수명 : popup
-기능 : 팝업 열기 / 닫기
-*/ ////////////////////////////////
 
 function popup(sts) {
   var pop = document.querySelector('.pop');
