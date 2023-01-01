@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* 메인 CSS - main.css */
+
 html,
 body {
   margin: 0;
@@ -62,21 +63,23 @@ li {
 /* 로고 */
 .logo {
   margin-left: -10px;
+  margin-top: -10px;
 }
 
 /* 메뉴 */
 .gnb {
-  font-family: 'Palatino Linotype', Courier, monospace;
+  font-family: "Palatino Linotype", Courier, monospace;
+
   position: absolute;
   top: 0px;
-  right: 100px;
+  right: 200px;
   /* 부모는? 싸고있는 .pbx.prt */
-  width: 900px; /*메뉴바 길이*/
+  width: 800px; /*메뉴바 길이*/
   height: 100px;
   background-color: rgb(0, 0, 0);
 }
 .gnb li {
-  width: 100px;
+  width: 133px;
   /* height: 50px; */
   /* li의 높이값을 안주면 a에 설정된 줄간격이 높이값이됨! */
 }
@@ -93,7 +96,7 @@ li {
 }
 /* 서브메뉴 */
 .gnb ol {
-  font-family: 'Palatino Linotype', Courier, monospace;
+  font-family: "Palatino Linotype", Courier, monospace;
   height: 0; /* 200px; */
   background-color: rgb(32, 32, 32); /*메뉴 안*/
   overflow: hidden; /* 숨기기 */
@@ -227,7 +230,7 @@ li {
   z-index: 999;
   background-color: #fff;
   border: 3px solid #888;
-  display: none; /* 처음에 안보임! */
+  /* display: none;*/
 }
 .pop h1 {
   /* 팝업제목 */
@@ -262,7 +265,7 @@ li {
 }
 .info2 {
   /* 카피라잇 */
-  font-family: 'Palatino Linotype', Courier, monospace;
+  font-family: "Palatino Linotype", Courier, monospace;
   word-spacing: 10px;
   width: 800px;
   text-align: center;
