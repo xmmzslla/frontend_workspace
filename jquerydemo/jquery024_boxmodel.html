@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery024_boxmodel.html</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border-width: 0;
+      }
+      #wrap {
+        width: 300px;
+        height: 200px;
+        background-color: #ccc;
+        position: relative;
+        top: 50px;
+        left: 400px;
+        margin: 0;
+      }
+
+      #box {
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        position: relative;
+        top: -50px;
+        left: 100px;
+        padding: 5px;
+        border: 10px solid red;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrqp">
+      <p id="box">박스1</p>
+    </div>
+
+    <p id="t1"></p>
+    <p id="t2"></p>
+    <p id="t3"></p>
+    <p id="t4"></p>
+    <p id="t5"></p>
+    <p id="t6"></p>
+  </body>
+</html>
