@@ -31,8 +31,44 @@
         padding: 5px;
         border: 10px solid red;
         margin: 10px;
+        /* margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px; */
       }
     </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // position(): 선택한 요소의 포지션 위치값 리턴(기준이 자신)
+        let top1 = $('#box').position().top;
+        let left1 = $('#box').position().left;
+        $('#t1').text(`top:${top1}, left:${left1}`);
+
+        // offset(): 선택한 요소의 포지션 위치값을 리턴(기준이 body)
+        let top2 = $('#box').offset().top;
+        let left2 = $('#box').offset().left;
+        $('#t2').text(`top:${top2}, left:${left2}`);
+
+        // width(): margin, border, padding을 제외한 가로 크기 리턴
+        let w1 = $('#box').width();
+        $('#t3').text(`너비:${w1}`);
+
+        // innerwidth(): padding()을 포함한 가로 크기 리턴
+        let w2 = $('#box').innerwidth();
+        $('#t4').text(`너비:${w2}`);
+
+        // outerwidth():border와 padding을 포함한 가로 크기 리턴
+        let w3 = $('#box').outerWidth();
+        $('#t5').text(`너비:${w3}`);
+
+        // outerwidth(true):margin, border, padding을 포함한 가로 크기 리턴
+        let w4 = $('#box').outerWidth();
+        $('#t6').text(`너비:${w4}`);
+      });
+    </script>
   </head>
   <body>
     <div id="wrqp">
