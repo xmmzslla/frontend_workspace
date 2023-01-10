@@ -1,22 +1,22 @@
 // js_043_propagation.js
 
-document.querySelector('.red').onclick = () => {
-  alert('red');
+document.querySelector(".red").onclick = (e) => {
+  alert("red");
   e.stopPropagation();
 };
 
-document.querySelector('.green').onclick = () => {
-  alert('green');
+document.querySelector(".green").onclick = (e) => {
+  alert("green");
   e.stopPropagation(); //이벤트 전파 차단
 };
 
-document.querySelector('.blue').onclick = () => {
-  alert('blue');
+document.querySelector(".blue").onclick = (e) => {
+  alert("blue");
   e.stopPropagation();
 };
 
-document.querySelector('a').onclick = (e) => {
-  alert('안녕하세요');
+document.querySelector("a").onclick = (e) => {
+  alert("안녕하세요");
   // e.preventDefault(); //이벤트 차단 페이지 이동 불가
   return false; // = e.preventDefault()
 };
