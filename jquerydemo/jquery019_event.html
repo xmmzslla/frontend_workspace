@@ -4,23 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jquery019_event.html</title>
-    <script>
-        $(document).ready(function () {
-          $('#box1').mouseover(function () {
-            $(this).text('mouseover');
-          });
-
-          $('#box1').mouseout(function () {
-            $(this).text('mouseout');
-          });
-
-          $('#box2').hover(function () {
-            $(this).text('mouseover');
-          },
-      function(){ $(this).text('mouseover');
-          }
-    </script>
+    <title>jquery019_event</title>
     <style>
       div {
         width: 100px;
@@ -28,6 +12,27 @@
         border: 1px solid black;
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#box1").mouseover(function () {
+          $(this).text("mouseover");
+        });
+
+        $("#box1").mouseout(function () {
+          $(this).text("mouseout");
+        });
+
+        $("#box2").hover(
+          function () {
+            $(this).text("mouseover");
+          },
+          function () {
+            $(this).text("mouseout");
+          }
+        );
+      });
+    </script>
   </head>
   <body>
     <div id="box1">

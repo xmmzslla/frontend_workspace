@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jquery025_rolling_slide_banner.html</title>
+    <title>jquery025_rolling_slide_banner</title>
     <style>
       * {
         margin: 0;
@@ -38,7 +39,7 @@
       #frame {
         width: 232px;
         /* height: 58px; */
-        /* background-color: red; */
+        /* background-color: pink; */
         position: relative;
         margin: 10px auto;
         overflow: hidden;
@@ -49,46 +50,48 @@
         text-align: center;
       }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        // UL
-        let list = $('banner');
+        //ul
+        let list = $("#banner");
 
-        // 프레임에 사진 노출될 개수
+        //프레임에 노출될 사진 갯수
         let show_num = 3;
 
-        // 이전, 다음 버튼 클릭할 때 증감되는 값
+        //이전, 다음 버튼 클릭할 때 증감되는 값(count)
         let num = 0;
 
-        // 총 <li>의 개수 5개 리턴
-        let total = $('>li', lisy).length;
-        console.log(`total:${total}`);
+        //총 <li>의 갯수 : 5개
+        let total = $(">li", list).length;
+        console.log(`total:${total} `);
 
-        // li의 머비 80
-        let li_width = $('li:first', list).width();
+        //li의 너비 : 80
+        let li_width = $("li:first", list).width();
         console.log(`li_width:${li_width}`);
 
-        // copyObj = $('<li:lt(${' + show_num + '})', list).clone();
-        copyObj = $(`<li:lt(${show_num})`, list).clone();
+        //사진복사
+        let copyObj = $(`>li:lt(${show_num})`, list).clone();
         $(list).append(copyObj);
 
-        // 다음버튼 클릭할 때마다 이벤트 발생
-        $('.next').click(function () {
+        //다음 버튼 클릭할때마다 이벤트 발생
+        $(".next").click(function () {
           if (num == total) num = 0;
           num++;
           $(list)
             .stop()
-            .animate({ 'margin-left': -li_width * num + 'px' }, 50);
+            .animate({ "margin-left": -li_width * num + "px" }, 50);
           return false;
         });
 
-        $(',prev').click(function () {
+        //이전 버튼 클릭할때마다 이벤트 발생
+        $(".prev").click(function () {
           if (num == 0) num = total;
           num--;
           $(list)
             .stop()
-            .animate({ 'margin-left': -li_width * num + 'px' }, 50);
+            .animate({ "margin-left": -li_width * num + "px" }, 50);
           return false;
         });
       });
@@ -113,15 +116,6 @@
           </li>
           <li>
             <a href="#"><img src="images/pic_t5.jpg" alt="사진5" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/pic_t6.jpg" alt="사진6" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/pic_t7.jpg" alt="사진7" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="images/pic_t8.jpg" alt="사진8" /></a>
           </li>
         </ul>
       </div>
