@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="join">
+<!-- association : 1:1관계의 JOIN명령을 처리하기 위해서 사용된다. -->
+<resultMap type="part03.dto.EmpDTO" id="emp_dept_result" autoMapping="false"> <!-- false면 밑값이 같아도 일일이 다 넣어야함 true는 아님-->
+  <result column="employee_id" property="employee_id" /> <!-- employee_id 세터 매소드 오토 넣어줄 때 있어야함 -->
+  <result column="firat_name" property="firat_name"/>
+  <result column="job_id" property="job_id"/>
+  <association property="dept" javaType="part03.dto.DeptDTO">
+  <result column="department_id" property="department_id"/>
+  <result column="department_name" property="department_name"/>
+  </association>
+</resultMap>
+
+<select id="emp_dept" resultMap="emp_dept_result"> <!-- 여기서 참조하겠다 -->
+SELECT e.employee_id, e.first_name, e.job_id, d.department_id, d.department_name
+FROM employees e, departments d
+WHERE e.department_id = d.department_id;
+</select>
+</mapper>
