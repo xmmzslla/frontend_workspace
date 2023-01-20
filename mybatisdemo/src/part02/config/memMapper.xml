@@ -61,10 +61,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="partSearch" parameterType="part02.dto.MemDTO"
 		resultType="part02.dto.MemDTO">
 		SELECT * FROM mem
-		<!-- <where> <if test="name!=null"> name LIKE '%' || #{name} || '%' </if> 
-			<if test="age!=0"> OR age > #{age} </if> </where> -->
+		<!-- 
+		<where> 
+		<if test="name!=null"> 
+		name LIKE '%' || #{name} || '%' 
+		</if> 
+		
+		<if test="age!=0"> 
+		OR age > #{age} 
+		</if> 
+		</where> 
+		-->
 
-		<trim prefix="where" suffixOverrides="or/and">
+		<trim prefix="where" suffixOverrides="or|and">
 			<if test="name!=null">
 				name LIKE '%' || #{name} || '%' OR
 			</if>
