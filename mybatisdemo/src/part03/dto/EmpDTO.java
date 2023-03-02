@@ -2,7 +2,7 @@ package part03.dto;
 
 public class EmpDTO {
 	
-	private int employees_id, department_id;
+	private int employee_id, department_id;
 	private String first_name, job_id;
 	private DeptDTO dept;
 	
@@ -18,14 +18,14 @@ public class EmpDTO {
 		this.dept = dept;
 	}
 
-	public int getEmployees_id() {
-		return employees_id;
+	public int getEmployee_id() {
+		return employee_id;
 	}
-
-	public void setEmployees_id(int employees_id) {
-		this.employees_id = employees_id;
+	
+	public void setEmployee_id(int employee_id) {
+		this.employee_id = employee_id;
 	}
-
+	
 	public int getDepartment_id() {
 		return department_id;
 	}
