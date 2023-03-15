@@ -1,0 +1,13 @@
+INDEX VERSION 1.131
+C:\k_digital\frontend_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3052073800.index
+\webdemo\src
+C:\k_digital\frontend_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3270362078.index
+\webdemo\src
+C:\k_digital\frontend_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3471319463.index
+\webdemo\src
+C:\k_digital\frontend_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1552504445.index
+\webdemo\src
+C:\k_digital\frontend_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1072496534.index
+\mybatisdemo\src
+C:\k_digital\frontend_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1223413504.index
+\mybatisdemo\src
